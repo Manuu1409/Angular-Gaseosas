@@ -12,11 +12,17 @@ registerLocaleData(localEs);
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListaGaseosasComponent } from './lista-gaseosas/lista-gaseosas.component';
+import { ContactoGaseosasTitoComponent } from './contacto-gaseosas-tito/contacto-gaseosas-tito.component';
+import { GaseosaTitoGaseosasComponent } from './gaseosa-tito-gaseosas/gaseosa-tito-gaseosas.component';
+import { CarritoComprasComponent } from './carrito-compras/carrito-compras.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaGaseosasComponent
+    ListaGaseosasComponent,
+    ContactoGaseosasTitoComponent,
+    GaseosaTitoGaseosasComponent,
+    CarritoComprasComponent
   ],
   imports: [
     BrowserModule,
