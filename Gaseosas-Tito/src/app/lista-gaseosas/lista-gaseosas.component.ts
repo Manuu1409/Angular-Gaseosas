@@ -44,20 +44,5 @@ export class ListaGaseosasComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  disminuir(Gaseosa : Gaseosa) : void  {
-    if(Gaseosa.cantidad > 0)
-    Gaseosa.cantidad--;
-}
-
-  aumentar(Gaseosa : Gaseosa) : void  {
-    if(Gaseosa.cantidad < Gaseosa.stock)
-    Gaseosa.cantidad++;
-  }
-
-  cambiarcantidad (parametro, Gaseosa: Gaseosa) : void {
-    parametro.PreventDefault();
-
-
-  }
 
 }

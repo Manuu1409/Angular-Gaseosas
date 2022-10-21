@@ -14,12 +14,14 @@
             <td>{{Gaseosa.nombre}}</td>
             <td>{{Gaseosa.sabor}}</td>
             <td>{{Gaseosa.precio | currency}}</td>
-            <td><span *ngIf="Gaseosa.stock==0" >Sin Stock</span> <span *ngIf="Gaseosa.stock>1">{{Gaseosa.stock}}</span></td>
+            <td>
+                <span *ngIf="Gaseosa.stock==0" >Sin Stock</span> 
+                <span *ngIf="Gaseosa.stock>1">{{Gaseosa.stock}}</span>
+            </td>
             <td><img [src]="Gaseosa.imagen" ></td>
             <td>
-                <button type="button" class="btn btn-info" (click)="disminuir(Gaseosa)">-</button>
-                <input type="text"  [(ngModel)]="Gaseosa.cantidad" (keyup)="cambiarcantidad($event, Gaseosa)"> 
-                <button type="button" class="btn btn-info" (click)="aumentar(Gaseosa)">+</button>
+                <app-input-cantidad [cantidad]="Gaseosa.cantidad" [max]="Gaseosa.stock" *ngIf="Gaseosa.stock" ></app-input-cantidad>
+
             </td>
           <!--   <td><img [src]= ></td>  Para poner imagen se usa [] en el src -->
         </tr>

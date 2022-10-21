@@ -15,6 +15,8 @@ import { ListaGaseosasComponent } from './lista-gaseosas/lista-gaseosas.componen
 import { ContactoGaseosasTitoComponent } from './contacto-gaseosas-tito/contacto-gaseosas-tito.component';
 import { GaseosaTitoGaseosasComponent } from './gaseosa-tito-gaseosas/gaseosa-tito-gaseosas.component';
 import { CarritoComprasComponent } from './carrito-compras/carrito-compras.component';
+import { InputCantidadComponent } from './input-cantidad/input-cantidad.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { CarritoComprasComponent } from './carrito-compras/carrito-compras.compo
     ListaGaseosasComponent,
     ContactoGaseosasTitoComponent,
     GaseosaTitoGaseosasComponent,
-    CarritoComprasComponent
+    CarritoComprasComponent,
+    InputCantidadComponent,
+
   ],
   imports: [
     BrowserModule,
