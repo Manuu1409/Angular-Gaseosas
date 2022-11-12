@@ -18,6 +18,11 @@ export class InputCantidadComponent implements OnInit {
 
   @Output()
   cambiarCantidad: EventEmitter<number> = new EventEmitter<number>();
+
+  @Output()
+  maxGaseosas: EventEmitter<string> = new EventEmitter<string>();
+  
+
   
 
   ngOnInit(): void {
@@ -35,6 +40,8 @@ export class InputCantidadComponent implements OnInit {
     this.cantidad++;
     this.cambiarCantidad.emit(this.cantidad);
     }
+    else
+    this.maxGaseosas.emit("Maximo de gaseosas alcanzada");
   }
 
   cambiarcantidad (parametro) : void {

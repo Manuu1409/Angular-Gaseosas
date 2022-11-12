@@ -20,7 +20,9 @@
             </td>
             <td><img [src]="Gaseosa.imagen" ></td>
             <td>
-                <app-input-cantidad [cantidad]="Gaseosa.cantidad" [max]="Gaseosa.stock" *ngIf="Gaseosa.stock" ></app-input-cantidad>
+                <app-input-cantidad [cantidad]="Gaseosa.cantidad" [max]="Gaseosa.stock" *ngIf="Gaseosa.stock" (maxGaseosas)="maxGaseosas($event)" ></app-input-cantidad>  
+                <!-- no me toma el output cantidad () -->
+                <button class="btn btn-primary" (click)="AgregarAlCarrito(Gaseosa)">Comprar</button>
 
             </td>
           <!--   <td><img [src]= ></td>  Para poner imagen se usa [] en el src -->
