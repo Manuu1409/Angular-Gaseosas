@@ -49,7 +49,7 @@ export class ListaGaseosasComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  AgregarAlCarrito(gaseosas) : void {
+  AgregarAlCarrito(gaseosas: Gaseosa) : void {
     this.carrito.AgregarAlCarrito(gaseosas);
     gaseosas.stock -= gaseosas.cantidad;
     gaseosas.cantidad = 0;

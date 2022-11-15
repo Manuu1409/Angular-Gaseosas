@@ -1,6 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Gaseosa } from '../lista-gaseosas/Gaseosas';
-
 
 @Component({
   selector: 'app-input-cantidad',
@@ -11,18 +9,16 @@ export class InputCantidadComponent implements OnInit {
 
   constructor() { }
   @Input()
-  cantidad!: number; 
+  'cantidad': number; 
 
   @Input()
-  max!:number;
+  'max':number;
 
   @Output()
-  cambiarCantidad: EventEmitter<number> = new EventEmitter<number>();
+  'cambiarCantidad': EventEmitter<number> = new EventEmitter<number>();
 
   @Output()
-  maxGaseosas: EventEmitter<string> = new EventEmitter<string>();
-  
-
+  'maxGaseosas': EventEmitter<string> = new EventEmitter<string>();
   
 
   ngOnInit(): void {
@@ -44,11 +40,10 @@ export class InputCantidadComponent implements OnInit {
     this.maxGaseosas.emit("Maximo de gaseosas alcanzada");
   }
 
-  cambiarcantidad (parametro) : void {
-    parametro.PreventDefault(); {
-      this.cambiarCantidad.emit(this.cantidad);
-    }
-
+  cambiarcantidad() : void {
+      console.log(this.cantidad);
+      console.log("hola");
+      this.cambiarCantidad.emit(this.cantidad) 
 
   }
 

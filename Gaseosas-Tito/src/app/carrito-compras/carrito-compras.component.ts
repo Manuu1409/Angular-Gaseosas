@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { CarritoGaseosaService } from '../carrito-gaseosa.service';
+import { Gaseosa } from '../lista-gaseosas/Gaseosas';
 
 
 
@@ -10,7 +12,13 @@ import { CarritoGaseosaService } from '../carrito-gaseosa.service';
 })
 export class CarritoComprasComponent implements OnInit {
 
-  constructor(private carrito: CarritoGaseosaService) { }
+  carritoCompras$: Observable<Gaseosa[]> ;
+
+  constructor(private carrito: CarritoGaseosaService) { 
+    this.carritoCompras$ = carrito.carritoCompras.asObservable();
+    console.log(this.carritoCompras$);
+    
+  }
 
   ngOnInit(): void {
   }
