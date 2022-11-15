@@ -15,7 +15,7 @@ export class InputCantidadComponent implements OnInit {
   'max':number;
 
   @Output()
-  'cambiarCantidad': EventEmitter<number> = new EventEmitter<number>();
+  'cantidadChange': EventEmitter<number> = new EventEmitter<number>();
 
   @Output()
   'maxGaseosas': EventEmitter<string> = new EventEmitter<string>();
@@ -27,14 +27,14 @@ export class InputCantidadComponent implements OnInit {
   disminuir() : void  {
     if(this.cantidad > 0) {
     this.cantidad--;
-    this.cambiarCantidad.emit(this.cantidad);
+    this.cantidadChange.emit(this.cantidad);
     }
 }
 
   aumentar() : void  {
     if(this.cantidad < this.max) {
     this.cantidad++;
-    this.cambiarCantidad.emit(this.cantidad);
+    this.cantidadChange.emit(this.cantidad);
     }
     else
     this.maxGaseosas.emit("Maximo de gaseosas alcanzada");
@@ -43,7 +43,7 @@ export class InputCantidadComponent implements OnInit {
   cambiarcantidad() : void {
       console.log(this.cantidad);
       console.log("hola");
-      this.cambiarCantidad.emit(this.cantidad) 
+      this.cantidadChange.emit(this.cantidad) 
 
   }
 
