@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CarritoGaseosaService } from '../carrito-gaseosa.service';
+import { GaseosaDataService } from '../gaseosa-data.service';
 import { Gaseosa } from './Gaseosas';
 
 @Component({
@@ -10,7 +11,7 @@ import { Gaseosa } from './Gaseosas';
 export class ListaGaseosasComponent implements OnInit {
 
   Gaseosas: Gaseosa[] = [
-    {
+   /* {
     nombre : "Fanta",
     sabor : "Naranja",
     precio : 85,
@@ -37,16 +38,18 @@ export class ListaGaseosasComponent implements OnInit {
     cantidad: 0,
     
   }
-
-  ]
+*/
+  ];
 
   
 
-  constructor(private carrito: CarritoGaseosaService) {
+  constructor(private carrito: CarritoGaseosaService, private GaseosasService: GaseosaDataService) {
     
    }
 
   ngOnInit(): void {
+    this.GaseosasService.ObtenerGaseosas()
+    .subscribe(Gaseosas => this.Gaseosas = Gaseosas);
   }
 
   AgregarAlCarrito(gaseosas: Gaseosa) : void {

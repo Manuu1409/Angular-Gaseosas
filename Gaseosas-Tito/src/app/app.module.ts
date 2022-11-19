@@ -16,6 +16,8 @@ import { ContactoGaseosasTitoComponent } from './contacto-gaseosas-tito/contacto
 import { GaseosaTitoGaseosasComponent } from './gaseosa-tito-gaseosas/gaseosa-tito-gaseosas.component';
 import { CarritoComprasComponent } from './carrito-compras/carrito-compras.component';
 import { InputCantidadComponent } from './input-cantidad/input-cantidad.component';
+import {HttpClientModule} from '@angular/common/http';
+
 
 
 @NgModule({
@@ -32,6 +34,7 @@ import { InputCantidadComponent } from './input-cantidad/input-cantidad.componen
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [
     {
