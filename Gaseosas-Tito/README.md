@@ -1,5 +1,9 @@
 # GaseosasTito
 
+
+Hecho por Manuel Diaz, sobre la mock api, esta, pero no tiene relacion con la pagina, ya que la queria usar para la prueba, si se quiere quitar comentar gaseosa-data-service-ts y descomentar lista-gaseosas.component.ts
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
 
 ## Development server
